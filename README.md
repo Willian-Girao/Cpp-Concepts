@@ -23,7 +23,7 @@
    6. Assignment (=, *=)
    7. Ternary (? :)
 
-6. **Reference** - Alias, that is, another name for an already existing variable. <mark>Reference is different from pointers</mark>:
+6. **[Reference](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/reference.cpp)** - Alias, that is, another name for an already existing variable. <mark>Reference is different from pointers</mark>:
 
    1. <mark>You cannot have NULL references</mark>. You must always be able to assume that a reference is connected to a legitimate piece of storage.
    2. <mark>References cannot be changed to refer to another object once initialized</mark>. Pointers can be pointed to another object at any time.
@@ -33,7 +33,7 @@
    - [References as Parameters](https://www.tutorialspoint.com/cplusplus/passing_parameters_by_references.htm)
    - [Reference as Return Value](https://www.tutorialspoint.com/cplusplus/returning_values_by_reference.htm)
 
-7. **Polymorphism** - C++ polymorphism means that <mark>a call to a member function will cause a different function to be executed depending on the type of object that invokes the function</mark>. Usually, polymorphism occurs when there is a hierarchy of classes and they are related by inheritance: when a base class implements a function (usually a pure virtual function) and its derived classes have their own (different) implementation of the same function.
+7. **[Polymorphism](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/polymorphism.cpp)** - C++ polymorphism means that <mark>a call to a member function will cause a different function to be executed depending on the type of object that invokes the function</mark>. Usually, polymorphism occurs when there is a hierarchy of classes and they are related by inheritance: when a base class implements a function (usually a pure virtual function) and its derived classes have their own (different) implementation of the same function.
 
    1. ***Static Linkage*** - Function call is fixed before the program is executed - is set during the compilation of the program.
       - <mark>Prevents polymorphism, that's why *virtual* must be used to create</mark> ***virtual functions*** and let the compiler knows we want the selection of the function to be called at any given point in the program (runtime) to be based on the kind of object for which it is called.
@@ -58,7 +58,7 @@
     1. ***Process-based*** - handles the concurrent execution of programs.
     2. ***Thread-based*** - deals with the concurrent execution of pieces of the same program.
 
-12. **Upcasting** - Upcasting is using the super class's reference or pointer to refer to a sub class's object.
+12. **[Upcasting](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/upcasting.cpp)** - Upcasting is using the super class's reference or pointer to refer to a sub class's object.
 
     2. In ***Downcasting*** we convert Super class's reference or pointer into a derived class's reference or pointer.
 
