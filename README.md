@@ -30,9 +30,6 @@
    3. <mark>A reference must be initialized when it is created</mark>. Pointers can be initialized at any time.
    4. When a function returns a reference, it returns an implicit pointer to its return value. This way, a function can be used on the left side of an assignment statement.
 
-   - [References as Parameters](https://www.tutorialspoint.com/cplusplus/passing_parameters_by_references.htm)
-   - [Reference as Return Value](https://www.tutorialspoint.com/cplusplus/returning_values_by_reference.htm)
-
 7. **[Polymorphism](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/polymorphism.cpp)** - C++ polymorphism means that <mark>a call to a member function will cause a different function to be executed depending on the type of object that invokes the function</mark>. Usually, polymorphism occurs when there is a hierarchy of classes and they are related by inheritance: when a base class implements a function (usually a pure virtual function) and its derived classes have their own (different) implementation of the same function.
 
    1. ***Static Linkage*** - Function call is fixed before the program is executed - is set during the compilation of the program.
