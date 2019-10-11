@@ -6,7 +6,7 @@
 
 2. **Member Functions** - function that <mark>has its definition or its prototype within the class definition</mark> like any other variable. 
 
-3. **Namespace** - In each scope, a name can only represent one entity, which means that there cannot be two variables with the same name within the same scope (logical division of the code which is designed to stop the naming conflict).
+3. **[Namespace](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/namespace.cpp)** - In each scope, a name can only represent one entity, which means that there cannot be two variables with the same name within the same scope (logical division of the code which is designed to stop the naming conflict).
 
    1. ***Namespace std*** is the default namespace standard used in C++, cout, cin and other things are defined in it (one way to call them is by using std::cout and std::cin).
    2. Namespaces allow us to group named entities that otherwise would have *global scope* into narrower scopes, giving them *namespace scope*. This allows organizing the elements of programs into different logical scopes referred to by names.
