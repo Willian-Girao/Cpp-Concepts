@@ -31,13 +31,13 @@
 7. **Polymorphism** - C++ polymorphism means that <mark>a call to a member function will cause a different function to be executed depending on the type of object that invokes the function</mark>. Usually, polymorphism occurs when there is a hierarchy of classes and they are related by inheritance: when a base class implements a function (usually a pure virtual function) and its derived classes have their own (different) implementation of the same function. There are two types:
 
    1. **[Compile-time Polymorphism (static binding)](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/compiletime_polymorphism.cpp)** - achieved when the object method is invoked at the compile time. This can be achieved by ***function overloading***, ***operator overloading*** or by the usage of ***class template***. 
-   2. **[Run-time Polymorphism (dynamic binding)](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/runtime_polymorphism.cpp)** - The runtime polymorphism is achieved when the object method is invoked at the runtime (when the compiler selects an appropriate member function when the program is running). To achieve this, **C++** supports a mechanism known as *Virtual Function* (***[Function Overriding](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/runtime_polymorphism.cpp)***).
+   2. **[Run-time Polymorphism (dynamic binding)](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/runtime_polymorphism.cpp)** - The runtime polymorphism is achieved when the object method is invoked at the runtime (when the compiler selects an appropriate member function when the program is running). To achieve this, **C++** supports a mechanism known as *[Virtual Function](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/runtime_polymorphism.cpp)* (***[Function Overriding](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/runtime_polymorphism.cpp)***).
       * Virtual functions ensure that the correct function is called for an object, regardless of the type of reference (or pointer) used for function call.
       * They are mainly used to achieve *Runtime polymorphism*.
       * Functions are declared with a **virtual** keyword in base class.
       * The resolving of function call is done at Run-time.
 
-   - ***Static Linkage*** - function call is fixed before the program is executed - is set during the compilation of the program. <mark>Prevents polymorphism, that's why *virtual* must be used to create</mark> ***virtual functions*** and let the compiler knows we want the selection of the function to be called at any given point in the program (runtime) to be based on the kind of object for which it is called.
+   - ***Static Linkage*** - function call is fixed before the program is executed - is set during the compilation of the program. <mark>Prevents polymorphism, that's why *virtual* must be used to create</mark> ***[virtual functions](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/runtime_polymorphism.cpp)*** and let the compiler knows we want the selection of the function to be called at any given point in the program (runtime) to be based on the kind of object for which it is called.
 
 8. **Data Abstraction** - Refers to providing only essential information about the data to the outside world, hiding the background details or implementation (e.g. access specifiers for classes members).
 
@@ -54,11 +54,11 @@
     4. ***Inline*** - defined within the body of the class (used to increase speed of processing) and if defined outside the class boundary then they must be prefixed by *inline* keyword.
     5. ***Friend*** - function can be accessed outside the class where it was declared. Can access all the data members of the class including private data members.
 
-11. **Multithreading** - execution of programs concurrently. C++ does not contain any built-in support for multithreaded applications. Instead, it relies entirely upon the O.S. to provide this feature.
+11. **[Multithreading](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/multithreading.cpp)** - execution of programs concurrently. C++ does not contain any built-in support for multithreaded applications. Instead, it relies entirely upon the O.S. to provide this feature.
 
     1. ***Process-based*** - handles the concurrent execution of programs.
 
-    2. ***Thread-based*** - deals with the concurrent execution of pieces of the same program.
+    2. ***[Thread-based](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/multithreading.cpp)*** - deals with the concurrent execution of pieces of the same program.
 
     3. Multithreading support was introduced in C+11. Prior to C++11, we had to use [POSIX threads or p threads library in C](https://www.geeksforgeeks.org/multithreading-c-2/). While this library did the job the lack of any standard language provided feature-set caused serious portability issues. C++ 11 did away with all that and gave us **std::thread**. The thread classes and related functions are defined in the **thread** header file. 
 
@@ -70,11 +70,11 @@
 
        - Lambda expression
 
-12. **Upcasting** - Upcasting is using the super class's reference or pointer to refer to a sub class's object.
+12. **[Upcasting](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/upcasting.cpp)** - Upcasting is using the super class's reference or pointer to refer to a sub class's object.
 
     2. In ***Downcasting*** we convert Super class's reference or pointer into a derived class's reference or pointer.
 
-13. **Preprocessor** - Are the directives, which give instructions to the compiler to preprocess the information before actual compilation starts. A ***#*** indicates a preprocessor directive and this <mark>directives are not C++ statements</mark> (so they do not end in a semicolon).
+13. **[Preprocessor](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/preprocessor.cpp)** - Are the directives, which give instructions to the compiler to preprocess the information before actual compilation starts. A ***#*** indicates a preprocessor directive and this <mark>directives are not C++ statements</mark> (so they do not end in a semicolon).
 
     1. ![](C:\Users\willi\OneDrive\Área de Trabalho\C++ Content Mds\cppCompilingFlow.png)
     2. The source code written is processed by the processors and an expanded source code file is generated. This file is then compiled by the compiler and an object code file is generated (***.obj***). Finally, the linker links this object code file to the object code of the library functions to generate the final executable. There are 4 main types:
@@ -91,18 +91,18 @@
           - ***#pragma warn -par*** -  warnings which are raised when a function does not uses the parameters passed to it. 
           - ***#pragma warn -rch*** -  warnings which are raised when a code is unreachable. For example: any code written after the *return* statement in a function is unreachable. 
 
-14. **Copy Constructor** - A copy constructor is a <mark>member function which initializes an object using another object of the same class</mark>.
+14. **[Copy Constructor](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/copyconstructor.cpp)** - A copy constructor is a <mark>member function which initializes an object using another object of the same class</mark>.
 
     2. If we don’t define our own copy constructor, the C++ compiler creates a default copy constructor for each class which does a member-wise copy between objects. The compiler created copy constructor works fine in general. <mark>We need to define our own copy constructor only if an object has pointers or any runtime allocation of the resource like file handle, a network connection, etc</mark>.
 
-15. What is **Virtual Function**?
+15. What is **[Virtual Function](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/runtime_polymorphism.cpp)**?
 
     - A member function which is declared within a base class and is re-defined (overridden) by a derived class. <mark>When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class’s version of the function</mark>.
 
-16. What is **Overloading**?
+16. What is **[Overloading](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/compiletime_polymorphism.cpp)**?
 
-    - **Function Overloading** - Two or more <mark>functions can have the same name but different parameters. They can be overloaded by change in number of arguments or change in type of arguments</mark> (in the case of templates - this can be considered as an example of polymorphism feature in C++). The overloaded functions are invoked by matching the type and number of arguments (***overload resolution***) and this is done at the compile time so the compiler selects the appropriate function at the compile time. <mark>The return type does not play any role</mark>.
-    - **Operator Overloading** - We can make operators to work for user defined classes. This means C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading. The operator overloading is also known as ***static binding***.
+    - **[Function Overloading](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/compiletime_polymorphism.cpp)** - Two or more <mark>functions can have the same name but different parameters. They can be overloaded by change in number of arguments or change in type of arguments</mark> (in the case of templates - this can be considered as an example of polymorphism feature in C++). The overloaded functions are invoked by matching the type and number of arguments (***overload resolution***) and this is done at the compile time so the compiler selects the appropriate function at the compile time. <mark>The return type does not play any role</mark>.
+    - **[Operator Overloading](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/compiletime_polymorphism.cpp)** - We can make operators to work for user defined classes. This means C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading. The operator overloading is also known as ***static binding***.
 
 17. What is **Binding**?
 
@@ -114,7 +114,7 @@
 
     - This a C++ <mark>technique that ensures only one copy of a base class's member variables are inherited by grandchild derived classes</mark>. Without virtual inheritance, if two classes `B` and `C` inherit from a class `A`, and a class `D` inherits from both `B` and `C`, then `D` will contain two copies of `A`'s member variables: one via `B`, and one via `C`. <mark>Instead, if classes `B` and `C` inherit virtually from class `A`, then objects of class `D` will contain only one set of the member variables from class `A`</mark>.
 
-19. What is a **Template**?
+19. What is a **[Template](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/template.cpp)**?
 
     - The simple idea is to pass data type as a parameter so that we don’t need to write the same code for different data types.
 
@@ -123,7 +123,7 @@
     - **Function overloading** - Function overloading is defined as we can have more than one version of the same function. The versions of a function will have different signature means that they have a different set of parameters.
     - **Operator overloading** - Operator overloading is defined as the standard operator can be redefined so that it has a different meaning <mark>when applied to the instances of a class</mark>.
 
-21. What is a **Virtual Destructor**?
+21. What is a **[Virtual Destructor](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/virtual_destructor.cpp)**?
 
     - A virtual destructor in C++ is <mark>used in the base class so that the derived class object can also be destroyed</mark>. A virtual destructor is declared by using the ~ tilde operator and then virtual keyword before the constructor.
     - Deleting a derived class object using a pointer to a base class that has a non-virtual destructor results in undefined behavior. To correct this situation, the base class should be defined with a virtual destructor. 
@@ -147,7 +147,7 @@
     | The structure does not support inheritance.                  |               The class supports the concept of inheritance. |
     | The type of a structure is a value type.                     |        <mark>The type of a class is a reference type</mark>. |
 
-24. ***Lambda Expressions*** -  a convenient way of <mark>defining an anonymous function object (a *closure*) right at the location where it is invoked or passed as an argument to a function</mark>. Typically lambdas are used to encapsulate a few lines of code that are passed to algorithms or asynchronous methods.  By using lambdas, you can <mark>write code that's less cumbersome and less prone to errors than the code for an equivalent function object</mark>.
+24. ***[Lambda Expressions](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/lmabda_expression.cpp)*** -  a convenient way of <mark>defining an anonymous function object (a *closure*) right at the location where it is invoked or passed as an argument to a function</mark>. Typically lambdas are used to encapsulate a few lines of code that are passed to algorithms or asynchronous methods.  By using lambdas, you can <mark>write code that's less cumbersome and less prone to errors than the code for an equivalent function object</mark>.
 
     -  When you write code, you probably use function pointers and function objects to solve problems and perform calculations. Function pointers and function objects each have advantages and disadvantages—for example, function pointers have minimal syntactic overhead but do not retain state within a scope, and function objects can maintain state but require the syntactic overhead of a class definition.
     -  ![](C:\Users\willi\OneDrive\Área de Trabalho\C++ Content Mds\lambdaexpsyntax.png)
