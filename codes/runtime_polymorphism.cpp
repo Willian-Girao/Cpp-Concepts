@@ -1,3 +1,4 @@
+// Dynamic Binding, Late Binding, Runtime Polymorphism, Function Overriding
 #include <iostream>
 using namespace std;
  
@@ -10,6 +11,9 @@ class Shape {
          width = a;
          height = b;
       }
+      // Without the use of 'virtual' the polymorphism would be
+      //prevented: the function call would be fixed during com-
+      //pilation (Shape's implementation).
       virtual int area() = 0; // pure virtual function
 };
 class Rectangle: public Shape {
