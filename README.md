@@ -4,7 +4,7 @@
 
 2. **Member Functions** - function that <mark>has its definition or its prototype within the class definition</mark> like any other variable. 
 
-3. **Namespace** - In each scope, a name can only represent one entity, which means that there cannot be two variables with the same name within the same scope (logical division of the code which is designed to stop the naming conflict).
+3. **[Namespace](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/namespace.cpp)** - In each scope, a name can only represent one entity, which means that there cannot be two variables with the same name within the same scope (logical division of the code which is designed to stop the naming conflict).
 
    1. ***Namespace std*** is the default namespace standard used in C++, cout, cin and other things are defined in it (one way to call them is by using std::cout and std::cin).
    2. Namespaces allow us to group named entities that otherwise would have *global scope* into narrower scopes, giving them *namespace scope*. This allows organizing the elements of programs into different logical scopes referred to by names.
@@ -21,7 +21,7 @@
    6. Assignment (=, *=)
    7. Ternary (? :)
 
-6. **Reference** - Alias, that is, another name for an already existing variable. <mark>Reference is different from pointers</mark>:
+6. **[Reference](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/reference.cpp)** - Alias, that is, another name for an already existing variable. <mark>Reference is different from pointers</mark>:
 
    1. <mark>You cannot have NULL references</mark>. You must always be able to assume that a reference is connected to a legitimate piece of storage.
    2. <mark>References cannot be changed to refer to another object once initialized</mark>. Pointers can be pointed to another object at any time.
@@ -30,8 +30,8 @@
 
 7. **Polymorphism** - C++ polymorphism means that <mark>a call to a member function will cause a different function to be executed depending on the type of object that invokes the function</mark>. Usually, polymorphism occurs when there is a hierarchy of classes and they are related by inheritance: when a base class implements a function (usually a pure virtual function) and its derived classes have their own (different) implementation of the same function. There are two types:
 
-   1. **Compile-time Polymorphism (static binding)** - achieved when the object method is invoked at the compile time. This can be achieved by ***function overloading***, ***operator overloading*** or by the usage of ***class template***. 
-   2. **Runtime Polymorphism (dynamic binding)** - The runtime polymorphism is achieved when the object method is invoked at the runtime (when the compiler selects an appropriate member function when the program is running). To achieve this, **C++** supports a mechanism known as *Virtual Function* (***Function Overriding***).
+   1. **[Compile-time Polymorphism (static binding)](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/compiletime_polymorphism.cpp)** - achieved when the object method is invoked at the compile time. This can be achieved by ***function overloading***, ***operator overloading*** or by the usage of ***class template***. 
+   2. **[Run-time Polymorphism (dynamic binding)](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/runtime_polymorphism.cpp)** - The runtime polymorphism is achieved when the object method is invoked at the runtime (when the compiler selects an appropriate member function when the program is running). To achieve this, **C++** supports a mechanism known as *Virtual Function* (***[Function Overriding](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/runtime_polymorphism.cpp)***).
       * Virtual functions ensure that the correct function is called for an object, regardless of the type of reference (or pointer) used for function call.
       * They are mainly used to achieve *Runtime polymorphism*.
       * Functions are declared with a **virtual** keyword in base class.
