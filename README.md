@@ -11,16 +11,6 @@
 
 4. **How Are Functions Classified** - *Library Functions* (built-in functions) and *User-defined Functions* (function_name(arguments) -> function signature) - plus combinations of: with/without arguments and with/without return.
 
-5. **Types of Operators** - Are basically functions that take arguments and produces a new value - Unary, Binary, Ternary.
-
-   1. Unary (++, --)
-   2. Arithmetic (*, /)
-   3. Relational (<, !=)
-   4. Logical (&&, ||)
-   5. Bitwise (&, <<, >>)
-   6. Assignment (=, *=)
-   7. Ternary (? :)
-
 6. **[Reference](https://github.com/Willian-Girao/Cpp-Concepts/blob/master/codes/reference.cpp)** - Alias, that is, another name for an already existing variable. <mark>Reference is different from pointers</mark>:
 
    1. <mark>You cannot have NULL references</mark>. You must always be able to assume that a reference is connected to a legitimate piece of storage.
